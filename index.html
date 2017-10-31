@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Peter von Pandahausen | Portfolio</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/picturefill.min.js"></script>
+	</head>
+	<body>
+		<!-- Bootstrap navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Peter von Pandahausen</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <!-- TODO: Add further pages, such as about, contact etc -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+		        <li><a href="#">About</a></li>
+		        <li ><a href="#">Contact</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container -->
+		</nav>
+		<!-- Main content -->
+		<div class="container">
+			<header class="row">
+				<div class="col-md-6">
+					<!-- The logo would be nice as an SVG, I only found a PNG though :( -->
+					<img class="panda-logo" src="img/panda_logo.png" alt="Panda Logo">
+				</div>
+				<div class="col-md-6 text-right text-uppercase">
+					<h1 class="green-text">Peter <span class="dark-text">von</span> Pandahausen</h1>
+					<h4>Professional Panda, Bamboo Connoisseur</h4>
+				</div>
+			</header>
+
+			<div class="row">
+				<div class="col-md-12">
+					<picture>
+						<source srcset="img/panda_tree_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_tree_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_tree_1600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_tree_1600.jpg" alt="Panda posing on tree">
+					</picture>
+				</div>
+			</div>
+			<div class="row text-center more-spacing">
+				<div class="col-md-12">
+					<!-- TODO: Link this to booking or contact page -->
+					<h2>Featured Work - <a href="#">Book me</a> for your next party!</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-center cursor-pointer" data-toggle="modal" data-target="#eating-bamboo">
+					<picture>
+						<source srcset="img/panda_eating_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_eating_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_eating_600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_eating_800.jpg" alt="Panda eating bamboo">
+					</picture>
+					<h3>Eating Bamboo</h3>
+					<p>https://github.com/panda/eating-bamboo</p>
+				</div>
+				<div class="col-md-4 text-center cursor-pointer" data-toggle="modal" data-target="#posing-cub">
+					<picture>
+						<source srcset="img/panda_cub_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_cub_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_cub_600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_cub_800.jpg" alt="Panda posing with cub">
+					</picture>
+					<h3>Posing with Cub</h3>
+					<p>https://github.com/panda/posing-cub</p>
+				</div>
+				<div class="col-md-4 text-center cursor-pointer" data-toggle="modal" data-target="#hugging-rock">
+					<picture>
+						<source srcset="img/panda_rock_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_rock_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_rock_600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_rock_800.jpg" alt="Panda hugging rock">
+					</picture>
+					<h3>Hugging Rock</h3>
+					<p>https://github.com/panda/hugging-rock</p>
+				</div>
+			</div>
+			<!-- Include Bootstrap Modals -->
+			<!-- Modal Eating Bamboo -->
+			<div class="modal fade" id="eating-bamboo" tabindex="-1" role="dialog" aria-labelledby="eatingBambooLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="eatingBambooLabel">Eating Bamboo</h4>
+			      </div>
+			      <div class="modal-body">
+					<picture>
+						<source srcset="img/panda_eating_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_eating_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_eating_600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_eating_800.jpg" alt="Panda eating bamboo">
+					</picture>
+			        <hr>
+					<p>Lorem ipsum ad qui amet dolore, vitae cetero quaerendum mel ea. Facilis fastidii duo no. Viris partiendo ius no, alia animal nam at. Feugait imperdiet ius an, no quis facer lucilius vis. Aliquam saperet contentiones ex pro, id idque offendit ius. Fugit suavitate ad eam, ut essent debitis cum. Cu duo iudico instructior. Sea te choro perfecto, per eu meis nonumy percipit. Ut mea sint constituam, cu pro impedit constituam.</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal Posing with Cub -->
+			<div class="modal fade" id="posing-cub" tabindex="-1" role="dialog" aria-labelledby="posingCubLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="posingCubLabel">Posing with Cub</h4>
+			      </div>
+			      <div class="modal-body">
+					<picture>
+						<source srcset="img/panda_cub_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_cub_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_cub_600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_cub_800.jpg" alt="Panda posing with cub">
+					</picture>
+			        <hr>
+					<p>Lorem ipsum ad qui amet dolore, vitae cetero quaerendum mel ea. Facilis fastidii duo no. Viris partiendo ius no, alia animal nam at. Feugait imperdiet ius an, no quis facer lucilius vis. Aliquam saperet contentiones ex pro, id idque offendit ius. Fugit suavitate ad eam, ut essent debitis cum. Cu duo iudico instructior. Sea te choro perfecto, per eu meis nonumy percipit. Ut mea sint constituam, cu pro impedit constituam.</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal Hugging Rock -->
+			<div class="modal fade" id="hugging-rock" tabindex="-1" role="dialog" aria-labelledby="huggingRockLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="huggingRockLabel">Hugging Rock</h4>
+			      </div>
+			      <div class="modal-body">
+					<picture>
+						<source srcset="img/panda_rock_400.jpg" media="(max-width: 600px)">
+						<source srcset="img/panda_rock_800.jpg" media="(min-width: 601px) and (max-width: 800px)">
+						<source srcset="img/panda_rock_600.jpg" media="(min-width: 801px)">
+						<img class="img-responsive" src="img/panda_rock_800.jpg" alt="Panda hugging rock">
+					</picture>
+			        <hr>
+					<p>Lorem ipsum ad qui amet dolore, vitae cetero quaerendum mel ea. Facilis fastidii duo no. Viris partiendo ius no, alia animal nam at. Feugait imperdiet ius an, no quis facer lucilius vis. Aliquam saperet contentiones ex pro, id idque offendit ius. Fugit suavitate ad eam, ut essent debitis cum. Cu duo iudico instructior. Sea te choro perfecto, per eu meis nonumy percipit. Ut mea sint constituam, cu pro impedit constituam.</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</body>
+</html>
